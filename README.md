@@ -14,19 +14,19 @@ Example: only display the minimap while in a vehicle, change HUD colors, etc.
 
 ## ⚙️ Installation
 
-1. Placez la ressource dans votre dossier `resources`. // Place the resource in your `resources` folder.
-2. Ajoutez la ligne suivante dans votre `server.cfg` : // Add the following line to your `server.cfg`:
+1. Placez la ressource dans votre dossier `resources`. - Place the resource in your `resources` folder.
+2. Ajoutez la ligne suivante dans votre `server.cfg` : - Add the following line to your `server.cfg`:
    ```cfg
    ensure ND_parametres
    ```
 
 ---
 
-## ➕ Ajouter un nouveau paramètre // Add a New Parameter
+## ➕ Ajouter un nouveau paramètre - Add a New Parameter
 
-### 1. Créez les fonctions pour charger / sauvegarder le paramètre // Create the funcitons to load / save the parameter
+### 1. Créez les fonctions pour charger / sauvegarder le paramètre - Create the funcitons to load / save the parameter
 
-#### ✅ Si c’est un paramètre booléen (oui/non) : // If it's a boolean (yes/no) :
+#### ✅ Si c’est un paramètre booléen (oui/non) : - If it's a boolean (yes/no) :
 
 ```lua
 local preference = false
@@ -43,7 +43,7 @@ function SavePreference()
 end
 ```
 
-#### 🔧 Si c’est un autre type (texte, nombre...) : // If it's an other type (number, text...)
+#### 🔧 Si c’est un autre type (texte, nombre...) : - If it's an other type (number, text...)
 
 ```lua
 local preference = nil
@@ -62,7 +62,7 @@ end
 
 ---
 
-### 2. Ajoutez votre fonction pour charger le paramètre dans le thread principal // Add your function to load the parameter in the principal thread
+### 2. Ajoutez votre fonction pour charger le paramètre dans le thread principal - Add your function to load the parameter in the principal thread
 
 ```lua
 Citizen.CreateThread(function()
@@ -82,7 +82,7 @@ end)
 
 ---
 
-### 3. Créez l’export du paramètre // Create the export
+### 3. Créez l’export du paramètre - Create the export
 
 ```lua
 exports("preference", function()
@@ -90,7 +90,7 @@ exports("preference", function()
 end)
 ```
 
-Et ajoutez dans le `fxmanifest.lua` : // And add it to `fxmanifest.lua` :
+Et ajoutez dans le `fxmanifest.lua` : - And add it to `fxmanifest.lua` :
 
 ```lua
 client_export {
@@ -100,7 +100,7 @@ client_export {
 
 ---
 
-### 4. Côté ressource concernée : // In the target resource :
+### 4. Côté ressource concernée : - In the target resource :
 
 #### 🖥️ Serveur :
 
@@ -126,5 +126,5 @@ end)
 
 ## 📬 Contact
 
-**Pour tout bug, suggestion ou question : // For any bug, suggestion, or question :**
+**Pour tout bug, suggestion ou question : - For any bug, suggestion, or question :**
 > Discord → `vkstriick971`
