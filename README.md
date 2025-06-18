@@ -24,7 +24,7 @@ Example: only display the minimap while in a vehicle, change HUD colors, etc.
 
 ## ➕ Ajouter un nouveau paramètre - Add a New Parameter
 
-### 1. Créez les fonctions pour charger / sauvegarder le paramètre - Create the funcitons to load / save the parameter
+### 1. Créez les fonctions pour charger / sauvegarder le paramètre - Create the functions to load / save the parameter
 
 #### ✅ Si c’est un paramètre booléen (oui/non) : - If it's a boolean (yes/no) :
 
